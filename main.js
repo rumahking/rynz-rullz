@@ -1,5 +1,6 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 import './config.js';
+import './lib/store.js';
 
 import { createRequire } from "module"; // Bring in the ability to create the 'require' method
 import path, { join } from 'path'
@@ -31,7 +32,7 @@ import {
 } from './lib/mongoDB.js';
 import store from './lib/storee.js'
 const {
-  // useSingleFileAuthState,
+  useSingleFileAuthState,
   DisconnectReason
 } = await import('@adiwajshing/baileys');
 
